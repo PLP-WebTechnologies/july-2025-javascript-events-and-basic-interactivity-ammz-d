@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Recipe Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>My Simple Recipe Website</h1>
+  </header>
+
+  <!-- Dropdown Navigation -->
+  <nav class="dropdown">
+    <button id="dropdownBtn">Recipes ▼</button>
+    <div id="dropdownContent" class="dropdown-content">
+      <a href="#">Breakfast</a>
+      <a href="#">Lunch</a>
+      <a href="#">Dinner</a>
+      <a href="#">Dessert</a>
+    </div>
+  </nav>
+
+  <!-- Part 1: Event Handling -->
+  <section>
+    <h2>Featured Recipe: Pancakes </h2>
+    <button id="showIngredientsBtn">Show Ingredients</button>
+    <ul id="ingredientsList" style="display:none;">
+      <li>2 cups flour</li>
+      <li>2 tbsp sugar</li>
+      <li>2 tsp baking powder</li>
+      <li>1 cup milk</li>
+      <li>1 egg</li>
+    </ul>
+
+    <button id="showTipBtn">Show Cooking Tip</button>
+    <p id="cookingTip"></p>
+  </section>
+
+  <!-- Part 2: Interactive Features -->
+  <section>
+    <h2>Interactive Features</h2>
+    <!-- Dark Mode -->
+    <button id="toggleModeBtn">Toggle Dark Mode </button>
+
+    <!-- Counter -->
+    <div class="counter">
+      <p>Recipes Viewed: <span id="recipeCount">0</span></p>
+      <button id="viewRecipeBtn">View Another Recipe</button>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq">
+    <h2>FAQ</h2>
+    <div class="faq-item">
+      <button class="faq-question">What is the best flour for pancakes?</button>
+      <p class="faq-answer">All-purpose flour works best for fluffy pancakes.</p>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I make pancakes without eggs?</button>
+      <p class="faq-answer">Yes, you can substitute eggs with mashed bananas or yogurt.</p>
+    </div>
+  </section>
+
+  <!-- Part 3: Form Validation -->
+  <section>
+    <h2>Submit Your Recipe</h2>
+    <form id="recipeForm">
+      <label>
+        Name:
+        <input type="text" id="name">
+        <span class="error" id="nameError"></span>
+      </label><br><br>
+
+      <label>
+        Email:
+        <input type="text" id="email">
+        <span class="error" id="emailError"></span>
+      </label><br><br>
+
+      <label>
+        Recipe Title:
+        <input type="text" id="title">
+        <span class="error" id="titleError"></span>
+      </label><br><br>
+
+      <label>
+        Ingredients:
+        <textarea id="ingredients"></textarea>
+        <span class="error" id="ingredientsError"></span>
+      </label><br><br>
+
+      <button type="submit">Submit Recipe</button>
+      <p id="formSuccess"></p>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
